@@ -26,10 +26,11 @@ public class Main {
 		wheels.add(createWheel(2));
 		System.out.println();
 	}
-
-	public static void main(String[] args) {
+	
+	public static void createCar() {
 		List<Wheel> backWheels = new ArrayList<Wheel>();
 		List<Wheel> frontWheels = new ArrayList<Wheel>();
+		Car car = null;
 		System.out.println("** Enter data of a vehicle **");
 		System.out.print("Plate: ");
 		String plate = scanner.nextLine();
@@ -37,7 +38,6 @@ public class Main {
 		String brand = scanner.nextLine();
 		System.out.print("Color: ");
 		String color = scanner.nextLine();
-		Car car = null;
 		try {
 			car = new Car(plate, brand, color);
 			createWheels(backWheels, "Back wheels");
@@ -46,5 +46,11 @@ public class Main {
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}
+	}
+
+	public static void main(String[] args) {
+		createCar();
+		
+		
 	}
 }
