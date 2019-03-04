@@ -36,4 +36,15 @@ public abstract class Vehicle {
 					+ "Enrollment should be (XXXXYY or XXXXYYY) where X is a number and Y is a letter.");
 		}
 	}
+	
+	public abstract void printDataWhells();
+	
+	public void print() {
+		System.out.println("\n+++ Data of a " + this.getClass().getSimpleName() + " +++");
+		System.out.println("Plate: " + this.plate);
+		System.out.println("Brand: " + this.brand);
+		System.out.println("Color: " + this.color);
+		System.out.println("\nData of wheels:");
+		printDataWhells();
+	}
 }

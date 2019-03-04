@@ -20,4 +20,9 @@ public class Wheel {
 		if(!(obj instanceof Wheel)) return super.equals(obj);
 		return this.brand.equals(((Wheel)obj).brand) && this.diameter == ((Wheel)obj).diameter;
 	}
+	
+	public void print() {
+		System.out.println("- Brand: " + this.brand);
+		System.out.println("- Diametre: " + this.diameter);
+	}
 }

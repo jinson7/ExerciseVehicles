@@ -25,6 +25,20 @@ public class Car extends Vehicle {
 
 		this.wheels.add(leftWheel);
 		this.wheels.add(rightWheel);
+	}
+
+	@Override
+	public void printDataWhells() {
+		System.out.println("Front Whells:");
+		System.out.println("* Left *");
+		this.wheels.get(0).print();
+		System.out.println("* Rigth *");
+		this.wheels.get(1).print();
+		System.out.println("Back Whells:");
+		System.out.println("* Left *");
+		this.wheels.get(2).print();
+		System.out.println("* Rigth *");
+		this.wheels.get(3).print();
 	}	
 
 }
