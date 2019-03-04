@@ -3,8 +3,8 @@ package com.vehicles.project;
 import java.util.List;
 
 public class Car extends Vehicle {
-
-	public Car(String plate, String brand, String color) {
+	
+	public Car(String plate, String brand, String color) throws Exception {
 		super(plate, brand, color);
 	}
 
@@ -21,7 +21,7 @@ public class Car extends Vehicle {
 		Wheel leftWheel = wheels.get(1);
 
 		if (!rightWheel.equals(leftWheel))
-			throw new Exception();
+			throw new Exception("There are different wheels.!");
 
 		this.wheels.add(leftWheel);
 		this.wheels.add(rightWheel);
