@@ -50,7 +50,7 @@ public class Main {
 			createWheels(backWheels, "Back wheels");
 			createWheels(frontWheels, "Front wheels");
 			car.addWheels(frontWheels, backWheels);
-			car.print();
+			System.out.println(car.print());
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}
@@ -62,7 +62,7 @@ public class Main {
 			Wheel frontWheel = createWheel();
 			Wheel backWheel = createWheel();
 			bike.addWheel(frontWheel, backWheel);
-			bike.print();
+			System.out.println(bike.print());
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}

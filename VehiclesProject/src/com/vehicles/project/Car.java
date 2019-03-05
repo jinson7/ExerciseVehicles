@@ -28,17 +28,19 @@ public class Car extends Vehicle {
 	}
 
 	@Override
-	public void printDataWhells() {
-		System.out.println("Front Whells:");
-		System.out.println("* Left *");
-		this.wheels.get(0).print();
-		System.out.println("* Rigth *");
-		this.wheels.get(1).print();
-		System.out.println("Back Whells:");
-		System.out.println("* Left *");
-		this.wheels.get(2).print();
-		System.out.println("* Rigth *");
-		this.wheels.get(3).print();
+	public String printDataWhells() {
+		StringBuilder stb = new StringBuilder();
+		stb.append("Front Whells:");
+		stb.append("\n* Left *\n");
+		stb.append(this.wheels.get(0).print());
+		stb.append("\n* Rigth *\n");
+		stb.append(this.wheels.get(1).print());
+		stb.append("\nBack Whells:");
+		stb.append("\n* Left *\n");
+		stb.append(this.wheels.get(2).print());
+		stb.append("\n* Rigth *\n");
+		stb.append(this.wheels.get(3).print());
+		return stb.toString();
 	}	
 
 }

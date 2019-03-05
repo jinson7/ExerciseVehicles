@@ -14,10 +14,12 @@ public class Bike extends Vehicle {
 	}
 	
 	@Override
-	public void printDataWhells() {
-		System.out.println("Front Whell:");
-		this.wheels.get(0).print();
-		System.out.println("Back Whell:");
-		this.wheels.get(1).print();
+	public String printDataWhells() {
+		StringBuilder stb = new StringBuilder();
+		stb.append("Front Whell:\n");
+		stb.append(this.wheels.get(0).print());
+		stb.append("\nBack Whell:\n");
+		stb.append(this.wheels.get(1).print());
+		return stb.toString();
 	}
 }

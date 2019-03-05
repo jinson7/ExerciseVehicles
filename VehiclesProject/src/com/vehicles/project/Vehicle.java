@@ -37,14 +37,16 @@ public abstract class Vehicle {
 		}
 	}
 	
-	public abstract void printDataWhells();
+	public abstract String printDataWhells();
 	
-	public void print() {
-		System.out.println("\n+++ Data of a " + this.getClass().getSimpleName() + " +++");
-		System.out.println("Plate: " + this.plate);
-		System.out.println("Brand: " + this.brand);
-		System.out.println("Color: " + this.color);
-		System.out.println("\nData of wheels:");
-		printDataWhells();
+	public String print() {
+		StringBuilder stb = new StringBuilder();
+		stb.append("\n+++ Data of a " + this.getClass().getSimpleName() + " +++");
+		stb.append("\nPlate: " + this.plate);
+		stb.append("\nBrand: " + this.brand);
+		stb.append("\nColor: " + this.color);
+		stb.append("\nData of wheels:\n");
+		stb.append(printDataWhells());
+		return stb.toString();
 	}
 }
